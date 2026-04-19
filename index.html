@@ -1,106 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendiendo CSS y HTML</title>
-    <link rel="stylesheet" href="Estilos.css">
-</head>
-<body>
+/* HEADER */
+header {
+    background-color: #f7941d;
+    text-align: center;
+    padding: 25px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
 
-<div class="contenedor1">
+header h1 {
+    font-size: 35px;
+}
 
-<header id="inicio">
-    <h1>Jose Manuel Quispe Saico</h1>
-    <p>Estudiante Universitario</p>
-</header>
+header p {
+    font-size: 18px;
+}
 
-<nav>
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#Alumno">Alumno</a></li>
-        <li><a href="#Curso">Curso</a></li>
-        <li><a href="#Universidad">Universidad</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="descarga.html" target="_blank">Descargar</a></li>
-        <li><a href="fotos.html" target="_blank">Fotos</a></li>
-        <li><a href="video.html" target="_blank">Video</a></li>
-    </ul>
-</nav>
+/* NAV */
+nav {
+    background-color: #00aa1c;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
-<div class="contenido-central">
+nav ul {
+    list-style: none;
+}
 
-<section>
-    <h2>Información principal</h2>
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
 
-    <article id="Alumno">
-        <h3>Datos del estudiante</h3>
-        <p>Jose Manuel Quispe Saico, estudiante de la carrera de ingeniería de sistemas, sexto ciclo</p>
-    </article>
+nav ul li a {
+    text-decoration: none;
+    color: blueviolet;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
 
-    <article id="Universidad">
-        <h3>Datos institucionales</h3>
-        <p>Universidad Tecnológica de los Andes  
-        Escuela Profesional de Ingeniería de Sistemas</p>
-    </article>
+/* EFECTO HOVER MENU */
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
 
-    <article id="Curso">
-        <h3>Descripción del curso</h3>
-        <p>El curso desarrolla competencias en HTML5 y CSS3 para la creación de sitios web.</p>
-    </article>
+/* CONTENIDO PRINCIPAL */
+.contenido-central {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
 
-    <!-- CONTACTO + REDES SOCIALES -->
-    <article id="contacto">
-        <h3>Contacto</h3>
-        <p>Puedes encontrarme en mis redes sociales:</p>
+section {
+    background-color: #f71da3;
+    flex: 3;
+    padding: 20px;
+    border-radius: 10px;
+}
 
-        <h4>Redes Sociales</h4>
-        <ul>
-            <li>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    Facebook
-                </a>
-            </li>
-            <li>
-                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
-                    TikTok
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    Instagram
-                </a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                    YouTube
-                </a>
-            </li>
-        </ul>
-    </article>
-</section>
+section h2 {
+    color: rgb(61, 43, 221);
+    text-align: center;
+    margin-bottom: 15px;
+}
 
-<aside>
-    <h3>Información adicional</h3>
+article {
+    background-color: #bb0876;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
 
-    <div class="buscador">
-        <h4>Buscador</h4>
-        <input type="text" placeholder="Escribe tu búsqueda...">
-        <button type="submit">Buscar</button>
-    </div>
-</aside>
+article h3 {
+    margin-bottom: 10px;
+}
+
+/* REDES SOCIALES (NUEVO) */
+article ul {
+    list-style: none;
+    padding: 0;
+}
+
+article ul li {
+    margin: 10px 0;
+}
+
+article ul li a {
+    text-decoration: none;
+    background-color: #340867;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* HOVER REDES */
+article ul li a:hover {
+    background-color: #fff;
+    color: rgb(63, 14, 14);
+}
+
+/* BOTON DESCARGA (NUEVO) */
+#descarga a {
+    text-decoration: none;
+    background-color: #340b96;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#descarga a:hover {
+    background-color: white;
+    color: #6954c9;
+    border: 2px solid #503bba;
+}
+
+/* ASIDE */
+aside {
+    background-color: #4d940a;
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+aside h3 {
+    margin-bottom: 15px;
+}
+
+/* BUSCADOR */
+.buscador {
+    margin-bottom: 20px;
+}
+
+.buscador h4 {
+    margin-bottom: 10px;
+}
+
+.buscador input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: #ce0202;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.galeria figure {
+    width: 180px;
+    text-align: center;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.galeria figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+}
 
 
-
-</div>
-
-<footer>
-    <p>Universidad Tecnológica de los Andes</p>
-    <p>Ingeniería de Sistemas - Desarrollo Web</p>
-    <p>&copy; 2026 - Jose Manuel Quispe Saico</p>
-</footer>
-
-</div>
-
-</body>
-</html>
